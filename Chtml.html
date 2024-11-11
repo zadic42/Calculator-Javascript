@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .calculator{
+            padding: 3%;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: #142f44;
+        }
+        .cal{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a{
+            width: 60px;
+            height: 30px;
+            border: none;
+            border-radius: 15px;
+            border-style: groove;
+            background-color: #205b7a;
+            color: #fff;
+            font-size: 20px;
+        }
+        .b{
+            width: 60px;
+            height: 30px;
+            border: none;
+            border-radius: 15px;
+            border-style: outset;
+            background-color: gold;
+            color: #fff;
+            font-size: 20px;
+        }
+        .c{
+            width: 60px;
+            height: 30px;
+            border: none;
+            border-radius: 15px;
+            border-style: outset;
+            background-color: orange;
+            color: #fff;
+            font-size: 20px;
+        }
+        .e{
+            width: 60px;
+            height: 30px;
+            border: none;
+            border-radius: 15px;
+            border-style: outset;
+            background-color: rgb(255, 0, 0);
+            color: #fff;
+            font-size: 20px;
+        }
+        .f{
+            width: 123px;
+            height: 30px;
+            border: none;
+            border-radius: 15px;
+            border-style: outset;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+        }
+        .d{
+            font-size: 30px;
+            height: 50px;
+            background: #a2bbcf;
+            color: #fff;
+            text-align: right;
+            padding: 5%;
+            border-radius: 10px;
+        }
+        .zeroth{
+            margin-bottom: 5%;
+        }
+        .first{
+            margin-bottom: 1%;
+        }
+        .second{
+            margin-bottom: 1%;
+        }
+        .third{
+            margin-bottom: 1%;
+        }
+        .fourth{
+            margin-bottom: 1%;
+        }
+        i{
+            color: white;
+            font-size: 20px;
+            row-gap: 10px;
+        }
+        input:hover{
+            color: #142f44;
+            cursor: pointer;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="calculator">
+        <form action="">
+            <h3 class="cal">TEXAS INSTRUMENTS</h3>
+            <i class='bx bx-math'></i>
+            <div class="zeroth">
+                <div id="display" class="d">0</div>
+            </div>
+            <div class="first">
+                <input class="a" type="button" value="1" onclick="appendNumber('1')">
+                <input class="a" type="button" value="2" onclick="appendNumber('2')">
+                <input class="a" type="button" value="3" onclick="appendNumber('3')">
+                <input class="b" type="button" value="/" onclick="appendNumber('/')">
+            </div>
+            <div class="second">
+                <input class="a" type="button" value="4" onclick="appendNumber('4')">
+                <input class="a" type="button" value="5" onclick="appendNumber('5')">
+                <input class="a" type="button" value="6" onclick="appendNumber('6')">
+                <input class="b" type="button" value="x" onclick="appendNumber('*')">
+            </div>
+            <div class="third">
+                <input class="a" type="button" value="7" onclick="appendNumber('7')">
+                <input class="a" type="button" value="8" onclick="appendNumber('8')">
+                <input class="a" type="button" value="9" onclick="appendNumber('9')">
+                <input class="b" type="button" value="-" onclick="appendNumber('-')">
+            </div>
+            <div class="fourth">
+                <input class="a" type="button" value="0" onclick="appendNumber('0')">
+                <input class="a" type="button" value="00" onclick="appendNumber('00')">
+                <input class="a" type="button" value="." onclick="appendNumber('.')">
+                <input class="b" type="button" value="+" onclick="appendNumber('+')">
+            </div>
+            <div class="fifth">
+                <input class="f" type="button" value="AC" onclick="clearDisplay()">
+                <input class="e" type="button" value="C" onclick="del()">
+                <input class="c" type="button" value="=" onclick="calculate()">
+            </div>
+        </form>
+    </div>
+    <script src="Cjavascript.js"></script>
+</body>
+</html>
